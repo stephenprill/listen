@@ -2,5 +2,5 @@
   "name": "listen-prill",
   "root": "./",
   "clean_urls": true,
-  "error_page": "y"
+  "error_page": "error.html"
 }
