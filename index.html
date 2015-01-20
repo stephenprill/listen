@@ -1,14 +1,17 @@
 <!doctype html>
-      <html>
-      <head>
-        <title>jQuery</title>
-        <link rel="stylesheet" type="text/css" href="semantic.css">
+<html>
+  <head>
+        <title>Listen</title>
+        <link rel="stylesheet" type="text/css" href="bower_components/semantic-ui/dist/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="app.css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-      </head>
-      <body>
+  </head>
 
+
+
+      <body>
         <div class="container">
+          <h2>Select Song</h2>
           <div class="ui segment">
             <i class="fa fa-play"></i>
           </div>
@@ -26,9 +29,19 @@
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/mustache/mustache.js"></script>
         <script src="app.js" type="text/javascript" charset="utf-8"></script>
-      </body>
-      </html>
-
-    </body>
-  </head>
+  </body>
 </html>
+
+    <!--   <script type="text/template" id="postsTemplate">
+      {{#tracks}}
+      <article>
+        <div class="ui segment"></div>
+          <h2>{{title}}</h2>
+          {{#tags}}
+          {{.}}
+          {{/tags}}
+        </header>
+        {{body}}
+      </article>
+      {{/tracks}}
+    </script> -->
