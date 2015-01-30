@@ -1,34 +1,32 @@
 <!doctype html>
 <html>
-  <head>
-        <title>Listen</title>
-        <link rel="stylesheet" type="text/css" href="bower_components/semantic-ui/dist/semantic.min.css">
-        <link rel="stylesheet" type="text/css" href="app.css">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  </head>
-
-
+      <head>
+            <title>Listen</title>
+            <link rel="stylesheet" type="text/css" href="bower_components/semantic-ui/dist/semantic.min.css">
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="css/app.css">
+      </head>
 
       <body>
-        <div class="container">
+        <div class="container" id="tracksList">
           <h2>Select Song</h2>
-          <div class="ui segment">
-            <i class="fa fa-play"></i>
-          </div>
-          <div class="ui segment">
-            <i class="fa fa-play"></i>
-          </div>
-          <div class="ui segment">
-            <i class="fa fa-play"></i>
-          </div>
-          <div class="ui segment">
-            <i class="fa fa-play"></i>
-          </div>
         </div>
 
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/mustache/mustache.js"></script>
-        <script src="app.js" type="text/javascript" charset="utf-8"></script>
+        <script src="javascript/app.js" type="text/javascript" charset="utf-8"></script>
+
+        <script type="text/template" id="trackTemplate">
+          <div class="ui segment">
+            <span>
+              <span class="control">
+                <i class="control fa fa-play"></i>
+                <i class="control fa fa-pause hidden"></i>
+              </span>
+              {{title}} by {{artist}}
+            </span>
+          </div>
+        </script>
   </body>
 </html>
 
