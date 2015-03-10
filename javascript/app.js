@@ -12,6 +12,8 @@
 
 $(document).ready(function () {
 
+  var trackPlaying = false;
+
   $.getJSON('data.json', function(data) {
     var $playerTemplate = $('#trackTemplate').html();
 
@@ -22,7 +24,24 @@ $(document).ready(function () {
     });
 
     $('.control').on('click', function () {
-      $(this).find('i').toggleClass('hidden')
+      $.each($.find('audio'), function (index, track) {
+        track.pause();
+      });
+
+      $('i.fa-play').removeClass("hidden");
+      $('i.fa-pause').addClass("hidden");
+
+      var track = $(this).find('audio')[0];
+
+      if(trackPlaying) {
+        track.pause();
+        trackPlaying = false;
+      } else {
+        track.play();
+        $(this).find('i.fa-play').addClass('hidden');
+        $(this).find('i.fa-pause').removeClass("hidden");
+        trackPlaying = true;
+      }
     });
 
 
